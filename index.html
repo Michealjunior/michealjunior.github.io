@@ -28,7 +28,7 @@
 <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
 <link rel="preconnect" href="https://cdn.jsdelivr.net" crossorigin>
 <link href="https://fonts.googleapis.com/css2?family=Chakra+Petch:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;700&display=swap" rel="stylesheet">
-<link rel="stylesheet" href="styles.css?v=5">
+<link rel="stylesheet" href="styles.css?v=6">
 
 <script type="application/ld+json">
 {
@@ -230,7 +230,7 @@
       </div>
       <div class="gauge reveal">
         <dt>open-source projects with live demos</dt>
-        <dd><span class="g-num" data-count="5">5</span></dd>
+        <dd><span class="g-num" data-count="6">6</span></dd>
         <span class="g-bar" style="--v:1" aria-hidden="true"><i></i></span>
       </div>
     </dl>
@@ -248,7 +248,7 @@
         <li class="caption"><p class="cap-k">// 01 · the work</p><p class="cap-v">227 challenges built inside real open-source codebases</p></li>
         <li class="caption"><p class="cap-k">// 02 · the bar</p><p class="cap-v"><b>210</b> approved. <b>92%</b> approval rate.</p></li>
         <li class="caption"><p class="cap-k">// 03 · the range</p><p class="cap-v">Python · Rust · Go · TypeScript</p></li>
-        <li class="caption"><p class="cap-k">// 04 · the output</p><p class="cap-v">5 open-source tools, live. Keep scrolling.</p></li>
+        <li class="caption"><p class="cap-k">// 04 · the output</p><p class="cap-v">6 open-source tools, live. Keep scrolling.</p></li>
       </ol>
     </div>
   </section>
@@ -273,9 +273,10 @@
             <p class="project-meta"><span class="pid">PRJ-01</span><span class="deployed">● deployed</span></p>
             <h3 class="glitch-hover" data-text="tracelens">tracelens</h3>
             <p class="project-pitch">See what your AI coding agent actually did.</p>
-            <p class="project-desc">Agent session logs run to thousands of JSONL lines. tracelens turns one into a timeline of prompts,
-              tool calls and results, with failures, slow steps and token usage at a glance. It runs entirely in your browser.</p>
-            <ul class="chips" aria-label="Built with"><li>React</li><li>TypeScript</li><li>Web Workers</li><li>SVG charts</li><li>Vitest</li></ul>
+            <p class="project-desc">Agent session logs and evaluation run bundles hold thousands of steps. tracelens turns them into a
+              timeline of prompts, tool calls and results, compares runs side by side with verdicts, tests and patches, and
+              shows failures and token usage at a glance. It runs entirely in your browser.</p>
+            <ul class="chips" aria-label="Built with"><li>React</li><li>TypeScript</li><li>Web Workers</li><li>ATIF</li><li>SVG charts</li><li>Vitest</li></ul>
             <div class="project-links">
               <a class="btn btn-neon btn-sm" href="https://michealjunior.github.io/tracelens/" target="_blank" rel="noopener">Live demo ↗</a>
               <a class="btn btn-line btn-sm" href="https://github.com/Michealjunior/tracelens" target="_blank" rel="noopener">Source</a>
@@ -304,6 +305,27 @@
           </div>
         </article>
 
+        <article class="project featured reveal" data-tilt>
+          <a class="shot" href="https://michealjunior.github.io/repo-hub/?demo" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
+            <span class="shot-bar"><i></i><i></i><i></i><span>michealjunior.github.io/repo-hub</span></span>
+            <img src="assets/projects/repo-hub.jpg" alt="" loading="lazy" width="1280" height="800">
+            <span class="scan" aria-hidden="true"></span>
+          </a>
+          <div class="project-body">
+            <p class="project-meta"><span class="pid">PRJ-03</span><span class="deployed">● deployed</span></p>
+            <h3 class="glitch-hover" data-text="repo-hub">repo-hub</h3>
+            <p class="project-pitch">Find the repo. Design the task. Keep it fair.</p>
+            <p class="project-desc">Screens open-source repositories for AI coding-agent benchmarks: licence and eligibility gates,
+              testability detection, merged-PR mining for realistic task sizes and side-by-side comparison, then carries one task
+              from spec to false-positive audit and difficulty check.</p>
+            <ul class="chips" aria-label="Built with"><li>React</li><li>TypeScript</li><li>GitHub REST API</li><li>IndexedDB</li><li>Vitest</li></ul>
+            <div class="project-links">
+              <a class="btn btn-neon btn-sm" href="https://michealjunior.github.io/repo-hub/?demo" target="_blank" rel="noopener">Live demo ↗</a>
+              <a class="btn btn-line btn-sm" href="https://github.com/Michealjunior/repo-hub" target="_blank" rel="noopener">Source</a>
+            </div>
+          </div>
+        </article>
+
         <div class="project-grid">
           <article class="project card reveal" data-tilt>
             <a class="shot" href="https://michealjunior.github.io/repo-doctor/" target="_blank" rel="noopener" tabindex="-1" aria-hidden="true">
@@ -312,7 +334,7 @@
               <span class="scan" aria-hidden="true"></span>
             </a>
             <div class="project-body">
-              <p class="project-meta"><span class="pid">PRJ-03</span><span class="deployed">● deployed</span></p>
+              <p class="project-meta"><span class="pid">PRJ-04</span><span class="deployed">● deployed</span></p>
               <h3 class="glitch-hover" data-text="repo-doctor">repo-doctor</h3>
               <p class="project-pitch">Audit any GitHub profile the way a recruiter sees it.</p>
               <p class="project-desc">Scores a profile and every repo, then ranks the fixes that matter most: missing READMEs,
@@ -332,7 +354,7 @@
               <span class="scan" aria-hidden="true"></span>
             </a>
             <div class="project-body">
-              <p class="project-meta"><span class="pid">PRJ-04</span><span class="deployed">● deployed</span></p>
+              <p class="project-meta"><span class="pid">PRJ-05</span><span class="deployed">● deployed</span></p>
               <h3 class="glitch-hover" data-text="nuban-check">nuban-check</h3>
               <p class="project-pitch">Validate Nigerian bank account numbers offline.</p>
               <p class="project-desc">Checks NUBAN check digits, suggests the likely bank, and repairs payroll files where Excel stripped
@@ -352,7 +374,7 @@
               <span class="scan" aria-hidden="true"></span>
             </a>
             <div class="project-body">
-              <p class="project-meta"><span class="pid">PRJ-05</span><span class="deployed">● deployed</span></p>
+              <p class="project-meta"><span class="pid">PRJ-06</span><span class="deployed">● deployed</span></p>
               <h3 class="glitch-hover" data-text="naira-invoice">naira-invoice</h3>
               <p class="project-pitch">Professional invoices for Nigerian freelancers.</p>
               <p class="project-desc">Naira formatting, VAT, amount in words and print-ready A4 PDFs in under a minute. Private, free,
@@ -376,10 +398,6 @@
             <li>
               <a href="https://starapp.starnex.company" target="_blank" rel="noopener"><strong>StarApp prelaunch site</strong> ↗</a>
               <span>Next.js, Three.js brand mark, early-access sign-up on Cloudflare D1</span>
-            </li>
-            <li>
-              <a href="https://github.com/Michealjunior/repo-hub" target="_blank" rel="noopener"><strong>repo-hub</strong> ↗</a>
-              <span>Single-page tool for scouting open-source repos and designing AI-agent challenges</span>
             </li>
             <li>
               <strong>Shipd Sync</strong> <em class="private">private</em>
@@ -541,7 +559,7 @@
   </div>
 </div>
 
-<script src="main.js" defer></script>
+<script src="main.js?v=6" defer></script>
 <script type="module" src="scene.js?v=6"></script>
 </body>
 </html>

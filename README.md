@@ -18,8 +18,9 @@ The portfolio of **Ayeni Oluwaferanmi Micheal**, a software engineer in AI evalu
 
 | Project | What it does |
 | --- | --- |
-| [tracelens](https://github.com/Michealjunior/tracelens) | See what your AI coding agent actually did, from its session log |
+| [tracelens](https://github.com/Michealjunior/tracelens) | See what your AI coding agents actually did: session logs and run bundles, compared side by side |
 | [promptcheck](https://github.com/Michealjunior/promptcheck) | Regression tests for LLM prompts, ready for CI |
+| [repo-hub](https://github.com/Michealjunior/repo-hub) | Scout open-source repos and design fair, hard benchmark tasks for AI coding agents |
 | [repo-doctor](https://github.com/Michealjunior/repo-doctor) | Audit a GitHub profile the way a recruiter sees it |
 | [nuban-check](https://github.com/Michealjunior/nuban-check) | Validate Nigerian bank account numbers offline and repair broken spreadsheets |
 | [naira-invoice](https://github.com/Michealjunior/naira-invoice) | Professional invoices for Nigerian freelancers, offline |
