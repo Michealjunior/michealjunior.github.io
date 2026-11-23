@@ -9,9 +9,9 @@ The portfolio of **Ayeni Oluwaferanmi Micheal**, a software engineer in AI evalu
 ## What's inside
 
 - A single, fast page: hero with a live terminal, about, selected work, experience, stack and contact.
-- Hand-built with HTML, CSS and JavaScript. No framework, no build step, no tracking.
-- Details: a constellation sky that reacts to the pointer, words that light up as you scroll, a live Ibadan clock (WAT), and a command palette (press <kbd>⌘K</kbd>, <kbd>Ctrl K</kbd> or <kbd>/</kbd>).
-- Accessible by default: semantic landmarks, a skip link, keyboard-friendly navigation and palette, visible focus, and `prefers-reduced-motion` support.
+- Hand-built with HTML, CSS, JavaScript and Three.js. No framework, no build step, no tracking.
+- **SIGNAL** design: a cyber HUD theme with a Three.js data globe (live arcs from Ibadan, bloom glow), a scroll-driven 3D flight tunnel, glitch and decrypt text effects, a draggable 3D skill sphere, code rain, a boot sequence and a command palette (press <kbd>⌘K</kbd>, <kbd>Ctrl K</kbd> or <kbd>/</kbd>).
+- Accessible by default: semantic landmarks, a skip link, keyboard-friendly navigation and palette, visible focus, and full `prefers-reduced-motion` support (no boot sequence, static 3D frames, no glitch loops).
 - SEO ready: Open Graph and Twitter cards, JSON-LD `Person` data, sitemap and robots file.
 
 ## Projects featured
