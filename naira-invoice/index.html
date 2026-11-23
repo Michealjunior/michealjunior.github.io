@@ -2,13 +2,55 @@
 <html lang="en">
 <head>
 <meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
 <title>naira-invoice has moved</title>
 <meta name="robots" content="noindex">
 <link rel="canonical" href="https://naira-invoice-app.vercel.app/">
-<script>location.replace('https://naira-invoice-app.vercel.app/' + location.search + location.hash);</script>
-<meta http-equiv="refresh" content="0; url=https://naira-invoice-app.vercel.app/">
+<script>
+  // Invoices saved at this old address live in this browser only. If there are any, offer a backup
+  // (the app's own JSON backup format) before forwarding; otherwise forward straight away.
+  var NEW_URL = 'https://naira-invoice-app.vercel.app/';
+  var saved = null;
+  try { saved = localStorage.getItem('naira-invoice/v1'); } catch (e) {}
+  if (!saved) location.replace(NEW_URL + location.search + location.hash);
+</script>
+<style>
+  body { margin: 0; min-height: 100vh; display: grid; place-items: center; padding: 24px 16px; box-sizing: border-box; background: #04070a; color: #d6e4ec; font: 16px/1.6 Inter, system-ui, sans-serif; }
+  main { max-width: 560px; }
+  h1 { font-size: 26px; line-height: 1.25; margin: 0 0 12px; }
+  ol { padding-left: 22px; }
+  a, button { color: #04070a; background: #00ff9d; border: 0; font: 700 14px ui-monospace, monospace; text-transform: uppercase; letter-spacing: .04em; padding: 13px 18px; text-decoration: none; cursor: pointer; display: inline-block; margin: 6px 8px 6px 0; }
+  a.plain { background: none; color: #00ff9d; padding: 0; margin: 0; text-transform: none; letter-spacing: 0; font: inherit; text-decoration: underline; }
+  #msg { color: #ffc857; min-height: 1.6em; }
+</style>
 </head>
-<body style="background:#04070a;color:#d6e4ec;font:16px system-ui,sans-serif;padding:24px">
-<p>naira-invoice has moved to <a style="color:#00ff9d" href="https://naira-invoice-app.vercel.app/">naira-invoice-app.vercel.app</a>.</p>
+<body>
+<main>
+  <h1>Naira Invoice has moved to <a class="plain" href="https://naira-invoice-app.vercel.app/">naira-invoice-app.vercel.app</a></h1>
+  <p>Your invoices from this old address are still saved in this browser. To keep them:</p>
+  <ol>
+    <li>Download a backup of them here.</li>
+    <li>Open the new address, go to <b>Settings → Import JSON backup</b> and choose the file.</li>
+  </ol>
+  <button type="button" id="backup">Download backup</button>
+  <a href="https://naira-invoice-app.vercel.app/">Open the new address</a>
+  <p id="msg" role="status"></p>
+</main>
+<script>
+  document.getElementById('backup').addEventListener('click', function () {
+    var msg = document.getElementById('msg');
+    try {
+      var data = JSON.parse(saved);
+      var body = JSON.stringify({ app: 'naira-invoice', version: 1, exportedAt: new Date().toISOString(), data: data }, null, 2);
+      var a = document.createElement('a');
+      a.href = URL.createObjectURL(new Blob([body], { type: 'application/json' }));
+      a.download = 'naira-invoice-backup-' + new Date().toISOString().slice(0, 10) + '.json';
+      document.body.appendChild(a); a.click(); a.remove();
+      msg.textContent = 'Backup downloaded. Now open the new address and import it in Settings.';
+    } catch (e) {
+      msg.textContent = 'This browser\'s saved data could not be read, so no backup was made.';
+    }
+  });
+</script>
 </body>
 </html>
