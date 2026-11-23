@@ -346,6 +346,7 @@
     { group: 'Navigate', label: 'Contact', hint: '#contact', run: go('#contact') },
     { group: 'Projects', label: 'tracelens: live demo', hint: 'AI agent log viewer', run: open('https://michealjunior.github.io/tracelens/') },
     { group: 'Projects', label: 'promptcheck: live site', hint: 'LLM regression tests', run: open('https://michealjunior.github.io/promptcheck/') },
+    { group: 'Projects', label: 'seqcast: live tool', hint: 'Agent run-length forecast', run: open('https://seqcast.vercel.app/?demo') },
     { group: 'Projects', label: 'repo-hub: live demo', hint: 'Benchmark task design', run: open('https://michealjunior.github.io/repo-hub/?demo') },
     { group: 'Projects', label: 'repo-doctor: live demo', hint: 'GitHub profile audit', run: open('https://michealjunior.github.io/repo-doctor/') },
     { group: 'Projects', label: 'nuban-check: live demo', hint: 'NUBAN validator', run: open('https://michealjunior.github.io/nuban-check/') },
