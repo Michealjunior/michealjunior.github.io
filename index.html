@@ -8,7 +8,8 @@
 <meta name="author" content="Ayeni Oluwaferanmi Micheal">
 <meta name="theme-color" content="#04070a">
 <link rel="canonical" href="https://michealjunior.github.io/">
-<link rel="icon" href="assets/favicon.svg" type="image/svg+xml">
+<link rel="icon" href="assets/favicon.png" type="image/png">
+<link rel="icon" href="assets/favicon.svg" type="image/svg+xml" sizes="any">
 <link rel="apple-touch-icon" href="assets/apple-touch-icon.png">
 
 <meta property="og:type" content="website">
@@ -61,6 +62,7 @@
 <!-- Boot sequence (decorative, skippable, shown once per session) -->
 <div class="boot" aria-hidden="true">
   <div class="boot-inner">
+    <img class="boot-avatar" src="assets/starjnr.jpg" alt="" width="96" height="96">
     <p class="boot-brand">SIGNAL<span>//</span>OS <em>v3.0</em></p>
     <pre class="boot-log"></pre>
     <div class="boot-bar"><span></span></div>
@@ -82,9 +84,7 @@
 <header class="nav" id="top">
   <div class="nav-bar">
     <a class="logo" href="#top" aria-label="Ayeni Oluwaferanmi Micheal, back to top">
-      <span class="logo-mark" aria-hidden="true">
-        <svg viewBox="0 0 32 32" width="26" height="26"><path d="M4 9l12-6 12 6v14l-12 6-12-6z" fill="none" stroke="currentColor" stroke-width="2"/><path d="M11 21V11l5 6 5-6v10" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linejoin="round"/></svg>
-      </span>
+      <img class="logo-avatar" src="assets/starjnr.jpg" alt="" width="36" height="36">
       <span class="logo-text">MICHEAL<span class="logo-slash">//</span><span class="logo-caret">_</span></span>
     </a>
     <nav class="nav-links" aria-label="Primary">
@@ -178,42 +178,62 @@
 
   <!-- Dossier -->
   <section class="section dossier" id="dossier" aria-labelledby="about-title">
-    <div class="wrap dossier-grid">
-      <div>
-        <p class="label"><span>[00]</span> SUBJECT_PROFILE</p>
-        <h2 id="about-title" class="reveal" data-scramble>Who's behind the signal</h2>
-        <div class="panel reveal">
-          <div class="panel-bar"><span>profile.md</span><span class="panel-ok">● verified</span></div>
-          <p class="dossier-text">
-            Every day I write the hardest fair tests I can for AI coding agents: real features, inside real open-source
-            codebases, with hidden tests that reject every wrong answer and accept every right one. The rest of the time I build
-            products, for StarNex, for clients and for developers like me.
-          </p>
+    <div class="wrap">
+      <div class="dossier-top">
+        <figure class="idcard reveal">
+          <div class="id-head" aria-hidden="true"><span>ID_CARD // 0x5TAR</span><span class="id-ok">● verified</span></div>
+          <div class="id-visual">
+            <span class="ring r1" aria-hidden="true"></span><span class="ring r2" aria-hidden="true"></span><span class="ring r3" aria-hidden="true"></span>
+            <img src="assets/starjnr.jpg" alt="STARJNR emblem: a hooded figure with a glowing green star" width="460" height="460" loading="lazy">
+            <span class="id-sweep" aria-hidden="true"></span>
+          </div>
+          <figcaption>
+            <dl class="id-rows">
+              <div><dt>ID</dt><dd>STARJNR</dd></div>
+              <div><dt>NAME</dt><dd>Ayeni Oluwaferanmi Micheal</dd></div>
+              <div><dt>ROLE</dt><dd>Software Engineer</dd></div>
+              <div><dt>BASE</dt><dd>Ibadan, NG · WAT</dd></div>
+              <div><dt>STATUS</dt><dd class="ok">● Active · open to work</dd></div>
+            </dl>
+          </figcaption>
+        </figure>
+
+        <div class="dossier-copy">
+          <p class="label"><span>[00]</span> SUBJECT_PROFILE</p>
+          <h2 id="about-title" class="reveal" data-scramble>Who's behind the signal</h2>
+          <div class="panel reveal">
+            <div class="panel-bar"><span>profile.md</span><span class="panel-ok">● verified</span></div>
+            <p class="dossier-text">
+              Every day I write the hardest fair tests I can for AI coding agents: real features, inside real open-source
+              codebases, with hidden tests that reject every wrong answer and accept every right one. The rest of the time I build
+              products, for StarNex, for clients and for developers like me.
+            </p>
+          </div>
         </div>
       </div>
 
       <dl class="gauges">
-        <div class="gauge reveal">
-          <dt>AI coding challenges approved at Shipd</dt>
-          <dd><span class="g-num" data-count="210">210</span></dd>
-          <span class="g-bar" style="--v:.925" aria-hidden="true"><i></i></span>
-        </div>
-        <div class="gauge reveal">
-          <dt>approval rate across 227 submissions</dt>
-          <dd><span class="g-num" data-count="92" data-suffix="%">92%</span></dd>
-          <svg class="g-ring" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="52"/><circle class="g-arc" cx="60" cy="60" r="52" style="--v:.92"/></svg>
-        </div>
-        <div class="gauge reveal">
-          <dt>open-source codebases worked in, from pip to BuildKit</dt>
-          <dd><span class="g-num" data-count="25" data-suffix="+">25+</span></dd>
-          <span class="g-bar cyan" style="--v:.7" aria-hidden="true"><i></i></span>
-        </div>
-        <div class="gauge reveal">
-          <dt>open-source projects with live demos</dt>
-          <dd><span class="g-num" data-count="5">5</span></dd>
-          <span class="g-bar" style="--v:1" aria-hidden="true"><i></i></span>
-        </div>
-      </dl>
+      <div class="gauge reveal">
+        <dt>AI coding challenges approved at Shipd</dt>
+        <dd><span class="g-num" data-count="210">210</span></dd>
+        <span class="g-bar" style="--v:.925" aria-hidden="true"><i></i></span>
+      </div>
+      <div class="gauge reveal">
+        <dt>approval rate across 227 submissions</dt>
+        <dd><span class="g-num" data-count="92" data-suffix="%">92%</span></dd>
+        <svg class="g-ring" viewBox="0 0 120 120" aria-hidden="true"><circle cx="60" cy="60" r="52"/><circle class="g-arc" cx="60" cy="60" r="52" style="--v:.92"/></svg>
+      </div>
+      <div class="gauge reveal">
+        <dt>open-source codebases worked in, from pip to BuildKit</dt>
+        <dd><span class="g-num" data-count="25" data-suffix="+">25+</span></dd>
+        <span class="g-bar cyan" style="--v:.7" aria-hidden="true"><i></i></span>
+      </div>
+      <div class="gauge reveal">
+        <dt>open-source projects with live demos</dt>
+        <dd><span class="g-num" data-count="5">5</span></dd>
+        <span class="g-bar" style="--v:1" aria-hidden="true"><i></i></span>
+      </div>
+    </dl>
     </div>
   </section>
 
