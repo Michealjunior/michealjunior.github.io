@@ -189,18 +189,40 @@ function initGlobe() {
 
   const { composer, bloom } = makeComposer(renderer, scene, camera, small() ? 0.55 : 0.75);
   let w = 0; let h = 0;
+  // Lay the globe out in screen pixels against the part of the hero that is actually visible,
+  // so it stays whole and centred on any window shape (the hero can be taller than the window).
+  const layout = () => {
+    const vh = Math.min(h, window.innerHeight);
+    const unit = (2 * Math.tan((camera.fov * DEG) / 2) * 7.2) / h; // world units per pixel at the globe's depth
+    // Use the free space to the right of the hero text; if there is not enough, rise from the bottom instead.
+    const copy = hero.querySelector('.hero-copy');
+    const textRight = copy ? copy.getBoundingClientRect().right - hero.getBoundingClientRect().left : w * 0.5;
+    const free = w - textRight - 24;
+    let cx; let cy; let radiusPx;
+    if (free >= 320) {
+      radiusPx = Math.min(free * 0.42, vh * 0.34);
+      cx = textRight + free * 0.55;
+      cy = vh * 0.53;
+    } else {
+      radiusPx = Math.min(w * 0.42, vh * 0.3);
+      cx = w * 0.6;
+      cy = h - radiusPx * 0.1;
+    }
+    world.scale.setScalar((radiusPx * unit) / (R * 1.1));
+    world.position.set((cx - w / 2) * unit, -(cy - h / 2) * unit, 0);
+  };
   const resize = () => {
     const r = canvas.getBoundingClientRect();
     w = Math.max(1, r.width); h = Math.max(1, r.height);
     renderer.setSize(w, h, false); composer.setSize(w, h); bloom.resolution.set(w, h);
     camera.aspect = w / h;
-    if (w >= 1000) { world.position.set(2.75, 0.05, 0); world.scale.setScalar(0.74); camera.fov = 42; }
-    else if (w >= 640) { world.position.set(1.6, -0.9, 0); world.scale.setScalar(0.7); camera.fov = 46; }
-    else { world.position.set(0.4, -4.35, 0); world.scale.setScalar(0.8); camera.fov = 50; }
+    camera.fov = w >= 1000 ? 42 : w >= 640 ? 46 : 50;
     camera.updateProjectionMatrix();
+    layout();
   };
   resize();
   window.addEventListener('resize', resize);
+  new ResizeObserver(resize).observe(hero);
 
   let mx = 0; let my = 0; let tmx = 0; let tmy = 0;
   window.addEventListener('pointermove', (e) => { tmx = (e.clientX / window.innerWidth - 0.5); tmy = (e.clientY / window.innerHeight - 0.5); }, { passive: true });
