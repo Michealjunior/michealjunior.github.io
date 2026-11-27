@@ -1,8 +1,8 @@
-# michealjunior.github.io
+# starjnrdev.github.io
 
 The portfolio of **Ayeni Oluwaferanmi Micheal**, a software engineer in AI evaluation and full-stack development based in Ibadan, Nigeria.
 
-**Live:** https://michealjunior.github.io
+**Live:** https://starjnrdev.github.io
 
 ![Portfolio preview](assets/og-image.png)
 
@@ -19,7 +19,7 @@ The portfolio of **Ayeni Oluwaferanmi Micheal**, a software engineer in AI evalu
 | Project | What it does |
 | --- | --- |
 | [tracelens](https://tracelens-app.vercel.app/) | See what your AI coding agents actually did: session logs and run bundles, compared side by side |
-| [promptcheck](https://github.com/Michealjunior/promptcheck) | Regression tests for LLM prompts, ready for CI |
+| [promptcheck](https://github.com/StarJnrDev/promptcheck) | Regression tests for LLM prompts, ready for CI |
 | [repo-hub](https://repo-hub-app.vercel.app/) | Scout open-source repos and design fair, hard benchmark tasks for AI coding agents |
 | [repo-doctor](https://repo-doctor-app.vercel.app/) | Audit a GitHub profile the way a recruiter sees it |
 | [nuban-check](https://nuban-check.vercel.app/) | Validate Nigerian bank account numbers offline and repair broken spreadsheets |

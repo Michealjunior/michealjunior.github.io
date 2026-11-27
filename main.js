@@ -29,7 +29,7 @@
     const bar = $('.boot-bar', boot);
     const lines = [
       ['> establishing secure session', 'ok'],
-      ['> resolving host michealjunior.github.io', 'ok'],
+      ['> resolving host starjnrdev.github.io', 'ok'],
       ['> loading profile ayeni.oluwaferanmi.micheal', 'ok'],
       ['> mounting projects [5/5]', 'ok'],
       ['> calibrating signal: 210 approved / 227', 'ok'],
@@ -352,10 +352,10 @@
     { group: 'Projects', label: 'nuban-check: live demo', hint: 'NUBAN validator', run: open('https://nuban-check.vercel.app/') },
     { group: 'Projects', label: 'naira-invoice: live demo', hint: 'Invoice generator', run: open('https://naira-invoice-app.vercel.app/') },
     { group: 'Links', label: 'Download résumé (PDF)', hint: 'pdf', run: open('assets/Ayeni-Oluwaferanmi-Micheal-CV.pdf') },
-    { group: 'Links', label: 'GitHub', hint: 'github.com/Michealjunior', run: open('https://github.com/Michealjunior') },
+    { group: 'Links', label: 'GitHub', hint: 'github.com/StarJnrDev', run: open('https://github.com/StarJnrDev') },
     { group: 'Links', label: 'LinkedIn', hint: 'linkedin.com', run: open('https://www.linkedin.com/in/ayeni-oluwaferanmi-668ba6301') },
     { group: 'Links', label: 'StarNex', hint: 'starnex.company', run: open('https://starnex.company') },
-    { group: 'Actions', label: 'Copy link to this portfolio', hint: 'clipboard', run: () => navigator.clipboard?.writeText('https://michealjunior.github.io/') },
+    { group: 'Actions', label: 'Copy link to this portfolio', hint: 'clipboard', run: () => navigator.clipboard?.writeText('https://starjnrdev.github.io/') },
     { group: 'Actions', label: 'Replay boot sequence', hint: 'reload', run: () => { try { sessionStorage.removeItem('signal-booted'); } catch (_) { /* ignore */ } location.reload(); } },
   ];
   let filtered = commands; let active = 0; let lastFocus = null;
